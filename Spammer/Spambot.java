@@ -2,8 +2,8 @@
 import java.util.*;
 public class Spambot {
 
-    public static List<String> visitedURLs;
-    public static List<String> emailsFarmed;
+    public static List<String> visitedURLs = new ArrayList<String>();
+    public static List<String> emailsFarmed = new ArrayList<String>();
 
     
     

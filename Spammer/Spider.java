@@ -6,14 +6,13 @@ public class Spider
 {
 	private List<String> emails;
 	private List<String> URLs;
-	private int deadLinks; 
-        private String seedUrl;
+	private int deadLinks;
 
 	public Spider (String URL)
 	{
 		this.emails = new ArrayList<String>();
 		this.URLs = new ArrayList<String>();
-                this.seedUrl = URL;
+                this.URLs.add(URL);
                 
 	}
         
@@ -31,7 +30,6 @@ public class Spider
 	public void beginCrawl()
 	{
 		List<String> content = new ArrayList<String>();
-                URLs.add(seedUrl);
 		WebPage w = new WebPage();
 		while (deadLinks < 10 && emails.size() <= 100)
 		{
